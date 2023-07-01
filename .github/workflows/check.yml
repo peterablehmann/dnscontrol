@@ -26,6 +26,7 @@ jobs:
         run: |
           docker run --rm \
           -t \
+          -e HETZNER_API_TOKEN
           -v $(pwd)/dnsconfig.js:/dns/dnsconfig.js \
           -v $(pwd)/creds.json:/dns/creds.json \
           -v $(pwd)/spfcache.updated.json:/dns/spfcache.updated.json \
