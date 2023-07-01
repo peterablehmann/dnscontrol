@@ -1,0 +1,28 @@
+name: Check config
+on:
+  push:
+    branches:
+      - main
+
+env:
+  HETZNER_API_TOKEN: ${{ secrets.HETZNER_API_TOKEN }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Run dnscontrol push
+        run: |
+          docker run --rm \
+          -t \
+          -e HETZNER_API_TOKEN \
+          -v $(pwd)/dnsconfig.js:/dns/dnsconfig.js \
+          -v $(pwd)/creds.json:/dns/creds.json \
+          -v $(pwd)/spfcache.updated.json:/dns/spfcache.updated.json \
+          -v $(pwd)/spfcache.json:/dns/spfcache.json \
+          -v $(pwd)/zones/:/dns/zones/ \
+          -u $(id -u ${USER}):$(id -g ${USER}) \
+          stackexchange/dnscontrol \
+          push
