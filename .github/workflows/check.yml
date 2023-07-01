@@ -1,9 +1,6 @@
 name: Check config
 on: push
 
-env:
-  NONINTERACTIVE: 1
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,7 +10,7 @@ jobs:
       - name: Run dnscontrol check
         run: |
           docker run --rm \
-          -it \
+          -t \
           -v $(pwd)/dnsconfig.js:/dns/dnsconfig.js \
           -v $(pwd)/creds.json:/dns/creds.json \
           -v $(pwd)/spfcache.updated.json:/dns/spfcache.updated.json \
