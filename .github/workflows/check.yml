@@ -10,12 +10,15 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      # - name: Install homebrew
-      #   run: |
-      #     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-      # - name: Install dnscontrol
-      #   run: |
-      #     brew update
-      #     brew install dnscontrol
       - name: Run dnscontrol check
-        run: ls -a
+        run: |
+          docker run --rm \
+          -it \
+          -v $(pwd)/dnsconfig.js:/dns/dnsconfig.js \
+          -v $(pwd)/creds.json:/dns/creds.json \
+          -v $(pwd)/spfcache.updated.json:/dns/spfcache.updated.json \
+          -v $(pwd)/spfcache.json:/dns/spfcache.json \
+          -v $(pwd)/zones/:/dns/zones/ \
+          -u $(id -u ${USER}):$(id -g ${USER}) \
+          stackexchange/dnscontrol \
+          check
