@@ -1,4 +1,4 @@
-name: Check config
+name: Push config
 on:
   push:
     branches:
