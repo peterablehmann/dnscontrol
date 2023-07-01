@@ -39,8 +39,8 @@ D("lehmann.zone", REG_NONE,
 	CNAME('autoconfig', 'mail.your-server.de.'),
 	CNAME('cloud', 'nx24177.your-storageshare.de.'),
 	CNAME('www', 'lehmann.zone.'),
-    A('@', '78.46.0.148'),
-    AAAA('@', '2a01:4f8:d0a:2160::2')
+    //A('@', '78.46.0.148'),
+    //AAAA('@', '2a01:4f8:d0a:2160::2')
 )
 
 D("uic-fahrzeugnummer.de", REG_NONE,
