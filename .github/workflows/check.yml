@@ -1,18 +1,15 @@
-name: Check
-
-on: pull_request
+name: Check config
+on: push
 
 jobs:
-  check:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      - name: DNSControl check
-        uses: koenrh/dnscontrol-action@v3
-        with:
-          args: check
-
-          # Optionally, if your DNSConfig files are in a non-default location,
-          # you could specify the paths to the config and credentials file.
-          config_file: 'dnsconfig.js'
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Install dnscontrol
+        run: |
+          brew update
+          brew install dnscontrol
+      - name: Run dnscontrol check
+        run: ls -a
