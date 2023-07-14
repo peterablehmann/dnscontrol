@@ -93,5 +93,10 @@ D("xxhe.de", REG_NONE,
 	DnsProvider(DNS_HETZNER),
 	NAMESERVER('hydrogen.ns.hetzner.com.'),
 	NAMESERVER('oxygen.ns.hetzner.com.'),
-	NAMESERVER('helium.ns.hetzner.de.')
+	NAMESERVER('helium.ns.hetzner.de.'),
+	A('@', '65.108.86.181'),
+	AAAA('@', '2a01:4f9:c012:89c1::1'),
+	CNAME('imap.xxhe.de.', 'xxhe.de.'),
+	CNAME('mail.xxhe.de.', 'xxhe.de.'),
+	CNAME('smtp.xxhe.de.', 'xxhe.de.')
 )
