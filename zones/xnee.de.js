@@ -23,6 +23,9 @@ D("xnee.de", REG_NONE,
 
 	// Wireguard
 	A('wireguard', '78.46.178.158'),
-	AAAA('wireguard', '2a01:4f8:c012:23d1::1')
+	AAAA('wireguard', '2a01:4f8:c012:23d1::1'),
 	
+	// Minio
+	A('minio', '167.235.61.248'),
+	AAAA('minio', '2a01:4f8:c0c:f0df::1')
 )
