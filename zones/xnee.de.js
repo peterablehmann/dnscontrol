@@ -29,6 +29,13 @@ D("xnee.de", REG_NONE,
 	A('portainer', '167.235.61.248'),
 	AAAA('portainer', '2a01:4f8:c0c:f0df::1'),
 
+	// minio
+	A('minio', '159.69.43.46'),
+	AAAA('minio', '2a01:4f8:c2c:60f6::1'),
+	CNAME('console.minio', 'minio.xnee.de.'),
+    
+
+
 	// k3s-prod-1
 	// Loadbalancer TCP
     A('*.k3s-prod-1', '162.55.159.16', TTL(60)),
