@@ -27,5 +27,26 @@ D("xnee.de", REG_NONE,
 	
 	// Portainer
 	A('portainer', '167.235.61.248'),
-	AAAA('portainer', '2a01:4f8:c0c:f0df::1')
+	AAAA('portainer', '2a01:4f8:c0c:f0df::1'),
+
+	// minio
+	A('minio', '159.69.43.46'),
+	AAAA('minio', '2a01:4f8:c2c:60f6::1'),
+	CNAME('console.minio', 'minio.xnee.de.'),
+    
+
+
+	// k3s-prod-1
+	// Loadbalancer TCP
+    A('*.k3s-prod-1', '162.55.159.16', TTL(60)),
+	AAAA('*.k3s-prod-1', '2a01:4f8:1c1d:c0f::1', TTL(60)),
+
+	// Master
+	A('m1.k3s-prod-1', '116.203.45.29', TTL(60)),
+	AAAA('m1.k3s-prod-1', '2a01:4f8:c0c:9472::1', TTL(60)),
+	A('m2.k3s-prod-1', '88.99.226.48', TTL(60)),
+	AAAA('m2.k3s-prod-1', '2a01:4f8:1c1c:158::1', TTL(60)),
+	A('m3.k3s-prod-1', '195.201.143.236', TTL(60)),
+	AAAA('m3.k3s-prod-1', '2a01:4f8:c2c:c6de::1', TTL(60))
+
 )
