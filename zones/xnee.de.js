@@ -47,6 +47,8 @@ D("xnee.de", REG_NONE,
 	A('m2.k3s-prod-1', '88.99.226.48', TTL(60)),
 	AAAA('m2.k3s-prod-1', '2a01:4f8:1c1c:158::1', TTL(60)),
 	A('m3.k3s-prod-1', '195.201.143.236', TTL(60)),
-	AAAA('m3.k3s-prod-1', '2a01:4f8:c2c:c6de::1', TTL(60))
+	AAAA('m3.k3s-prod-1', '2a01:4f8:c2c:c6de::1', TTL(60)),
 
+	// Grafana
+	CNAME('grafana', 'grafana.k3s-prod-1.xnee.de.')
 )
