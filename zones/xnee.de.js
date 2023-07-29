@@ -17,24 +17,10 @@ D("xnee.de", REG_NONE,
 	A('sync', '135.181.206.213'),
 	AAAA('sync', '2a01:4f9:c011:aeba::1'),
 
-	// VYOS
-	A('vyos', '116.203.203.78'),
-	AAAA('vyos', '2a01:4f8:1c1c:e5c6::1'),
-
-	// Wireguard
-	A('wireguard', '78.46.178.158'),
-	AAAA('wireguard', '2a01:4f8:c012:23d1::1'),
-	
-	// Portainer
-	A('portainer', '167.235.61.248'),
-	AAAA('portainer', '2a01:4f8:c0c:f0df::1'),
-
 	// minio
 	A('minio', '159.69.43.46'),
 	AAAA('minio', '2a01:4f8:c2c:60f6::1'),
 	CNAME('console.minio', 'minio.xnee.de.'),
-    
-
 
 	// k3s-prod-1
 	// Loadbalancer TCP
