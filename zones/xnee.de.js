@@ -22,6 +22,10 @@ D("xnee.de", REG_NONE,
 	AAAA('minio', '2a01:4f8:c2c:60f6::1'),
 	CNAME('console.minio', 'minio.xnee.de.'),
 
+	// Gitlab
+	A('git', '167.235.236.96'),
+	AAAA('git', '2a01:4f8:c012:8971::1'),
+
 	// k3s-prod-1
 	// Loadbalancer TCP
     A('*.k3s-prod-1', '162.55.159.16', TTL(60)),
