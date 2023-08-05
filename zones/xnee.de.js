@@ -25,6 +25,8 @@ D("xnee.de", REG_NONE,
 	// Gitlab
 	A('git', '167.235.236.96'),
 	AAAA('git', '2a01:4f8:c012:8971::1'),
+	CNAME('registry', 'git.xnee.de.'),
+	CNAME('mattermost', 'git.xnee.de.'),
 
 	// k3s-prod-1
 	// Loadbalancer TCP
