@@ -28,6 +28,10 @@ D("xnee.de", REG_NONE,
 	CNAME('registry', 'git.xnee.de.'),
 	CNAME('mattermost', 'git.xnee.de.'),
 
+	// FreeIPA
+	A('ipa', '195.201.216.36'),
+	AAAA('ipa', '2a01:4f8:1c1c:8bc8::1'),
+
 	// k3s-prod-1
 	// Loadbalancer TCP
     A('*.k3s-prod-1', '162.55.159.16', TTL(60)),
