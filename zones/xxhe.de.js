@@ -10,12 +10,5 @@ D("xxhe.de", REG_NONE,
 	// SRV('_imaps._tcp', 0, 100, 993, 'mail.your-server.de.'),
 	// SRV('_pop3s._tcp', 0, 100, 995, 'mail.your-server.de.'),
 	// SRV('_submission._tcp', 0, 100, 587, 'mail.your-server.de.'),
-	// CNAME('autoconfig', 'mail.your-server.de.'),
-
-	// Managed Test
-	A('@', '65.108.86.181'),
-	AAAA('@', '2a01:4f9:c012:89c1::1'),
-	CNAME('imap.xxhe.de.', 'xxhe.de.'),
-	CNAME('mail.xxhe.de.', 'xxhe.de.'),
-	CNAME('smtp.xxhe.de.', 'xxhe.de.')
+	// CNAME('autoconfig', 'mail.your-server.de.')
 )

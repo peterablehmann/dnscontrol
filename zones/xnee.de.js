@@ -15,32 +15,5 @@ D("xnee.de", REG_NONE,
 
 	// Syncthing
 	A('sync', '135.181.206.213'),
-	AAAA('sync', '2a01:4f9:c011:aeba::1'),
-
-	// minio
-	A('minio', '159.69.43.46'),
-	AAAA('minio', '2a01:4f8:c2c:60f6::1'),
-	CNAME('console.minio', 'minio.xnee.de.'),
-
-	// Gitlab
-	A('git', '167.235.236.96'),
-	AAAA('git', '2a01:4f8:c012:8971::1'),
-	CNAME('registry', 'git.xnee.de.'),
-	CNAME('mattermost', 'git.xnee.de.'),
-
-	// k3s-prod-1
-	// Loadbalancer TCP
-    A('*.k3s-prod-1', '162.55.159.16', TTL(60)),
-	AAAA('*.k3s-prod-1', '2a01:4f8:1c1d:c0f::1', TTL(60)),
-
-	// Master
-	A('m1.k3s-prod-1', '116.203.45.29', TTL(60)),
-	AAAA('m1.k3s-prod-1', '2a01:4f8:c0c:9472::1', TTL(60)),
-	A('m2.k3s-prod-1', '88.99.226.48', TTL(60)),
-	AAAA('m2.k3s-prod-1', '2a01:4f8:1c1c:158::1', TTL(60)),
-	A('m3.k3s-prod-1', '195.201.143.236', TTL(60)),
-	AAAA('m3.k3s-prod-1', '2a01:4f8:c2c:c6de::1', TTL(60)),
-
-	// Grafana
-	CNAME('grafana', 'grafana.k3s-prod-1.xnee.de.')
+	AAAA('sync', '2a01:4f9:c011:aeba::1')
 )
