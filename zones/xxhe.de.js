@@ -1,5 +1,5 @@
 D("xxhe.de", REG_NONE,
-	DnsProvider(DNS_HETZNER),
+	DnsProvider(DNS_HETZNER)
 
 	// // Mail
 	// MX('@', 10, 'www208.your-server.de.'),
